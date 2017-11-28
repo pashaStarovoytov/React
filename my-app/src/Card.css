@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,  
+.cardForm,
+.card_1,
+.card_2,
+.card_3 {
+    width: 100%;
+    height: 100%;
+}
+    
+.btn-next{
+    width: 100%;
+    height: 10%; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button{
+    margin-bottom: 18px;
+    margin-right: 75px;
+    font-family: "Roboto";
+    padding: 0.5em 0.5em;
+    border: 0;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #2196f3;
+    border-radius: 3px;
+    box-shadow: 0 0 8px #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+button .ripple {
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: absolute;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.card_1,
+.card_2,
+.card_3 {
+    display:table-column;
+    backface-visibility: hidden;
+}
+
+.cardField{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    perspective: 1000px;
+}
+
+.cardField:active .column_1,
+.cardField:active .column_2,
+.cardField:active .column_3{
+    transform: rotateY(180deg);
+}
+  
+.cardForm{
+    background-color: #f5f5f5
+}
+
+.titlePage{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 24px;    
+}
+
+.column_1,
+.column_2,
+.column_3{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 20px black;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+   
+}
+
+.column_1{
+    background-color: #7bbfff;
+}
+
+.column_2{
+    background-color: #f5cd57;
+}
+
+.column_3{
+    background-color: #27b42c;
+}
+
+.image_1,
+.image_2,
+.image_3{
+    height: 80%;
+    width: 100%;
+}
+
+.img_1,
+.img_2,
+.img_3{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 256px;
+    font-family: "Roboto";
+}
+
+.img_2,
+.img_3{
+    color: #fdfdfd;
+}
+
+.name_1,
+.name_2,
+.name_3{
+    height: 20%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.text_1,
+.text_2,
+.text_3{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 6%; 
+    font-family: "Roboto";
+    font-size: 30px;    
+}
